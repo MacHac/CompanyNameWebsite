@@ -3,21 +3,70 @@
 	to {opacity: 1;margin-top: 0;}
 }
 
+@keyframes textfadeout {
+	from {opacity: 1;margin-bottom: 0;}
+	to {opacity: 0;margin-bottom: 15px;}
+}
+
+.slideupfadein {
+	animation: textfadein 1s;
+}
+
+.slideupfadeout {
+	animation: textfadeout 1s;
+}
+
+#frontpage-frame {
+	width: 100%;
+	height: 600px;
+	background-image: url("genericcity2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#fader-frame {
+	width: 500px;
+	height: 100px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 250px;
+	background-color: rgba(40,40,40,0.9);
+	margin: 0 auto 0 auto;
+}
+
 #primary-fade {
+	position: absolute;
 	font-size: 36pt;
 	font-family: arial;
 	text-align: center;
 	animation: textfadein 0.6s ease-out 0.3s normal forwards;
 	opacity: 0;
-	margin-top: 15px;
+	margin: 0 auto 0 auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 500px;
+}
+
+#hotword {
+	/*text-decoration: underline;*/
+	display: inline;
 }
 
 #secondary-fade {
+	position: absolute;
 	font-size: 12pt;
 	font-family: arial;
 	font-style: italic;
 	text-align: center;
 	animation: textfadein 0.7s ease-out 0.7s normal forwards;
 	opacity: 0;
-	margin-top: 15px;
+	margin: 15px auto 0 auto;
+	top: 65px;
+	left: 0;
+	right: 0;
+	width: 500px;
 }
+

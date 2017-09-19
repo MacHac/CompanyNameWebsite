@@ -13,6 +13,7 @@ body {
 	height: 50px;
 	line-height: 50px;
 	width: 100%;
+	position: fixed;
 }
 
 .header img { /* Logo */
@@ -65,4 +66,26 @@ body {
 
 .header-button:hover .dropdown-content a:hover {
 	background-color: #555555;
+}
+
+
+
+.display-area {
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.fake-header { /* Prevents text from being displayed under the header. */
+	height: 50px;
+	width: 100%;
+}
+
+.footer {
+	position: relative;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 150px;
+	padding: 10px 50px 10px 50px;
+	margin-top: 5px;
 }

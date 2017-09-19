@@ -63,10 +63,13 @@
 	text-align: center;
 	animation: textfadein 0.7s ease-out 0.7s normal forwards;
 	opacity: 0;
-	margin: 15px auto 0 auto;
+	margin: 0 auto 0 auto;
 	top: 65px;
 	left: 0;
 	right: 0;
 	width: 500px;
 }
 
+.noanimation {
+	animation: none !important;
+}

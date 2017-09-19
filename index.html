@@ -6,13 +6,25 @@
 		
 		<script src="js/jquery-3.2.1.min.js"></script>
 		<script>
-			var interval = window.setInterval(nextDescriptor, 5000);
+			//This handles the word switching you see at the top of the page.
+			window.setTimeout(function() {
+				$('#primary-fade').addClass('noanimation').css('opacity', '1');
+				
+				$('#secondary-fade').addClass('noanimation').css('opacity', '1');
+			}, 1500);
+			var interval = window.setInterval(switchDescriptor, 5000);
 			var descriptors = ["Service", "Prices", "Detail", "Care", "Quality"];
 			var descriptorIndex = 0;
+			
+			function switchDescriptor() {
+				$('#primary-fade').stop().fadeOut(400,nextDescriptor);
+			}
+			
 			function nextDescriptor() {
 				var descriptor = descriptors[descriptorIndex];
 				$('#hotword').html(descriptor);
 				descriptorIndex = (descriptorIndex + 1) % descriptors.length;
+				$('#primary-fade').stop().fadeIn(400);
 			}
 		</script>
 	</head>

@@ -7,6 +7,14 @@
 		<script src="js/jquery-3.2.1.min.js"></script>
 		<script>
 			//This handles the word switching you see at the top of the page.
+			
+			/* 
+				The CSS animation property doesn't play nice with manual JS animations (or at least with jQuery's fadeIn()
+				and fadeOut() functions.  I prefer the style of the CSS animation for the initial apperance for a number
+				of reasons, but the word-switching is annoying to accomplish in pure CSS properties.  So, after the
+				starter animation wraps up, the CSS animation code is supressed with a class, leaving the header as
+				normal text.
+			*/
 			window.setTimeout(function() {
 				$('#primary-fade').addClass('noanimation').css('opacity', '1');
 				
@@ -17,6 +25,7 @@
 			var descriptorIndex = 0;
 			
 			function switchDescriptor() {
+				//In a few rare cases, the animations can overlap, leading to minor jankiness.  Hence, the stop().
 				$('#primary-fade').stop().fadeOut(400,nextDescriptor);
 			}
 			
@@ -29,6 +38,7 @@
 		</script>
 	</head>
 	<body>
+		<!-- All the CSS for this bit is in the master style.css, because it's used across every page. -->
 		<div class="header">
 			<img src="logo.png"></img>
 			
@@ -60,17 +70,26 @@
 		
 		<div class="display-area">
 			<div class="fake-header"></div> <!-- Prevent things from being displayed under the header -->
+			
 			<div id="frontpage-frame">
 				<div id="fader-frame">
 					<div id="primary-fade">Unmatched <div id="hotword">Quality</div></div>
 					<div id="secondary-fade">Welcome to the future.</div>
 				</div>
 			</div>
-			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-			Hey!
+			
+			<div class="superbold">
+				We built an industry <b>from scratch</b>.
+			</div>
+			<p>
+				Fortune favors the bold, and there is no company bolder than CompanyName.  So thirty years ago, when
+				lesser men said that it couldn't be done, we stepped up to the plate.  We built an industry on quality,
+				on honesty, on innovation.  We set the standard, the benchmark, by which our competitors are measured.  
+				And we aren't done.  With a fully-funded five year business plan, CompanyName is here to stay.
+			</p>
 		</div>
 		
-		<div class="footer">
+		<div class="footer"> <!-- CSS stored in style.css -->
 			Hi!
 		</div>
 	</body>

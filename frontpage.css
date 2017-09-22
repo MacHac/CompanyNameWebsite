@@ -18,7 +18,7 @@
 
 #frontpage-frame {
 	width: 100%;
-	height: 600px;
+	height: 900px;
 	background-image: url("genericcity2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -27,24 +27,24 @@
 
 #fader-frame {
 	width: 500px;
-	height: 100px;
+	height: 20%;
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 250px;
+	top: 37.5%;
 	background-color: rgba(40,40,40,0.9);
 	margin: 0 auto 0 auto;
 }
 
 #primary-fade {
-	position: absolute;
+	position: relative;
 	font-size: 36pt;
 	font-family: arial;
 	text-align: center;
 	animation: textfadein 0.6s ease-out 0.3s normal forwards;
 	opacity: 0;
 	margin: 0 auto 0 auto;
-	top: 0;
+	top: 15%;
 	left: 0;
 	right: 0;
 	width: 500px;
@@ -56,7 +56,7 @@
 }
 
 #secondary-fade {
-	position: absolute;
+	position: relative;
 	font-size: 12pt;
 	font-family: arial;
 	font-style: italic;
@@ -64,10 +64,18 @@
 	animation: textfadein 0.7s ease-out 0.7s normal forwards;
 	opacity: 0;
 	margin: 0 auto 0 auto;
-	top: 65px;
+	top: 15%;
 	left: 0;
 	right: 0;
 	width: 500px;
+}
+
+.display-area p {
+	/*position: absolute;*/
+	width: 70%;
+	margin: 20px 15% 20px 15%;
+	font-family: verdana;
+	text-align: center;
 }
 
 .noanimation {

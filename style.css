@@ -1,6 +1,6 @@
 body {
 	margin: 0 0 0 0;
-	background-color: #444444;
+	background-color: #222222;
 	color: #FFFFFF;
 }
 
@@ -89,4 +89,14 @@ body {
 	height: 150px;
 	padding: 10px 50px 10px 50px;
 	margin-top: 5px;
+}
+
+
+
+.superbold {
+	margin: 30px 0 0 0;
+	font-size: 32pt;
+	font-family: Lucida Sans Unicode;
+	text-align: center;
+	color: #CCCCCC;
 }
